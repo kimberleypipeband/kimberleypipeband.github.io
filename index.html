@@ -259,6 +259,19 @@ a.ticket:hover{transform:translateY(-5px)}
 @media(max-width:900px){.vol-groups{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:480px){.vol-groups{grid-template-columns:1fr}.vol-act .btn{width:100%}}
 
+.btn.xl{font-size:21px;padding:22px 40px;box-shadow:0 10px 30px rgba(200,32,45,.45)}
+.buy-top{font-size:17px;padding:15px 26px;animation:pulse 2.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(239,85,96,.55)}70%{box-shadow:0 0 0 14px rgba(239,85,96,0)}100%{box-shadow:0 0 0 0 rgba(239,85,96,0)}}
+.sticky-buy{display:none}
+@media(max-width:820px){
+  .btn.xl{width:100%;padding:22px 20px}
+  .buy-top{font-size:16px;padding:13px 18px;min-height:48px}
+  .sticky-buy{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:22px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:linear-gradient(transparent,rgba(8,11,18,.94) 38%)}
+  .sticky-buy .btn{width:100%;font-size:19px;letter-spacing:.1em;white-space:nowrap;padding:19px 12px;box-shadow:0 8px 28px rgba(200,32,45,.55)}
+  body footer{padding-bottom:calc(34px + 96px + env(safe-area-inset-bottom,0px))}
+}
+@media(prefers-reduced-motion:reduce){.buy-top{animation:none}}
+
 /* Sponsor + final */
 .sponsor{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(30px,6vw,84px);align-items:center}
 .sponsor .logo{background:var(--ivory);padding:clamp(22px,4vw,44px);display:grid;gap:18px;justify-items:center;text-align:center;color:var(--ink)}
@@ -291,7 +304,7 @@ footer b{font:800 15px/1 var(--display);letter-spacing:.2em;text-transform:upper
       <a href="#tickets">Tickets</a>
       <a href="#plan">What’s Next</a>
     </nav>
-    <a class="btn small" href="#tickets">Get tickets</a>
+    <a class="btn buy-top" href="#tickets">Get tickets</a>
   </div>
 </header>
 
@@ -313,7 +326,7 @@ footer b{font:800 15px/1 var(--display);letter-spacing:.2em;text-transform:upper
         <div class="plate-txt"><b>Saturday, July 24, 2027</b><span>Western Financial Place, Cranbrook, B.C.</span><span>Evening. Start time to be announced.</span></div>
       </div>
       <div class="cta-row">
-        <a class="btn" href="#tickets">Tickets from $25</a>
+        <a class="btn xl" href="#tickets">Tickets from $25</a>
         <a class="btn ghost" href="#bands">Meet the bands</a>
         <span class="count" id="count1" hidden></span>
       </div>
@@ -455,7 +468,7 @@ footer b{font:800 15px/1 var(--display);letter-spacing:.2em;text-transform:upper
     <div class="eyebrow">July 24, 2027 · Cranbrook</div>
     <h2 id="fin-h">Come celebrate <em>with us.</em></h2>
     <div class="cta-row">
-      <a class="btn" href="#tickets">Get tickets</a>
+      <a class="btn xl" href="#tickets">Get tickets</a>
       <span class="count" id="count2" hidden></span>
     </div>
   </div>
@@ -463,6 +476,8 @@ footer b{font:800 15px/1 var(--display);letter-spacing:.2em;text-transform:upper
 </main>
 <div class="tartan" aria-hidden="true"></div>
 <footer><div class="in"><b>Kimberley Pipe Band · 1927–2027</b><span>The 100th Anniversary Tattoo · Western Financial Place, Cranbrook</span></div></footer>
+
+<div class="sticky-buy"><a class="btn" href="https://cranbrookbucks.goigniter.com/events/45360-kimberley-pipe-band-100th-anniversary-tattoo" target="_blank" rel="noopener">Get tickets from $25</a></div>
 
 <dialog id="bandDlg" aria-labelledby="bandName">
   <div class="dlg">
