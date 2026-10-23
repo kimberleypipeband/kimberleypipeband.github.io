@@ -824,6 +824,16 @@ footer b{font:800 15px/1 var(--display);letter-spacing:.2em;text-transform:upper
   tick();setInterval(tick,60000);
   document.addEventListener('visibilitychange',function(){if(!document.hidden)tick()});
 
+  /* Always start at the top (phones restore the last scroll position on reload) */
+  try{
+    if('scrollRestoration' in history)history.scrollRestoration='manual';
+    if(!location.hash){
+      var top0=function(){var r=document.documentElement,b=r.style.scrollBehavior;r.style.scrollBehavior='auto';window.scrollTo(0,0);r.style.scrollBehavior=b};
+      top0();
+      window.addEventListener('pageshow',function(e){if(e.persisted||!location.hash)top0()});
+    }
+  }catch(e){}
+
   /* Hide the phone ticket bar while a ticket button is already visible */
   try{
     var sb=document.querySelector('.sticky-buy'),seen=new Map();
