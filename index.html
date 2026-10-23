@@ -829,8 +829,11 @@ footer b{font:800 15px/1 var(--display);letter-spacing:.2em;text-transform:upper
     if('scrollRestoration' in history)history.scrollRestoration='manual';
     if(!location.hash){
       var top0=function(){var r=document.documentElement,b=r.style.scrollBehavior;r.style.scrollBehavior='auto';window.scrollTo(0,0);r.style.scrollBehavior=b};
+      var moved=false;['touchstart','wheel','keydown','mousedown'].forEach(function(ev){window.addEventListener(ev,function(){moved=true},{passive:true,once:true})});
+      var again=function(){if(!moved)top0()};
       top0();
-      window.addEventListener('pageshow',function(e){if(e.persisted||!location.hash)top0()});
+      window.addEventListener('load',function(){again();setTimeout(again,250);setTimeout(again,900);setTimeout(again,2200)});
+      window.addEventListener('pageshow',function(e){if(e.persisted||!location.hash){moved=false;top0()}});
     }
   }catch(e){}
 
