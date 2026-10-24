@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>The Bands · Kimberley Pipe Band 100th Anniversary Tattoo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap">
+<link rel="stylesheet" href="docs/site.css">
+<style>
+.pg-head{padding-top:clamp(40px,6vw,80px);padding-bottom:clamp(8px,2vw,20px)}
+.pg-head h1{font-size:clamp(46px,7.4vw,92px);line-height:.92;letter-spacing:.005em}
+.pg-head .copy{margin-top:18px}
+.bandimg{width:100%;height:auto;display:block;border:1px solid var(--line);margin-bottom:6px}
+.back-row{margin-top:clamp(30px,5vw,50px)}
+</style>
+</head>
+<body>
+<div class="top-gap" aria-hidden="true"></div>
+<header class="top">
+  <div class="in hb">
+    <a class="hbtn hb-meet" href="index.html">← Main page</a>
+    <a class="hbtn hb-vol" href="https://volunteersignup.org/L8AP3" target="_blank" rel="noopener">Become a volunteer</a>
+    <a class="hbtn hb-tix" href="https://cranbrookbucks.goigniter.com/events/45360-kimberley-pipe-band-100th-anniversary-tattoo" target="_blank" rel="noopener">Get tickets</a>
+  </div>
+</header>
+
+<main>
+<div class="tartan" aria-hidden="true"></div>
+<section class="band pg-head" aria-labelledby="bands-h">
+  <div class="in">
+    <div class="eyebrow">The bands</div>
+    <h1 id="bands-h">Check out the bands.</h1>
+    <p class="copy">Open any band to read its story. After your hosts, bands are listed oldest first.</p>
+  </div>
+</section>
+<section class="band" style="padding-top:clamp(24px,4vw,40px)" aria-label="All bands">
+  <div class="in">
+    <ul class="roster" id="roster" data-filter="all"></ul>
+    <div class="back-row"><a class="btn ghost" href="index.html">← Back to the main page</a></div>
+  </div>
+</section>
+</main>
+<div class="tartan" aria-hidden="true"></div>
+<footer><div class="in"><div class="fcol"><b>Kimberley Pipe Band · 1927–2027</b><span>The 100th Anniversary Tattoo · Western Financial Place, Cranbrook</span></div><div class="flinks"><a href="mailto:Info@kimberleypipeband.ca">Info@kimberleypipeband.ca</a><a href="https://www.facebook.com/1397696916910297" target="_blank" rel="noopener">Facebook ↗</a></div></div></footer>
+
+<div class="sticky-buy"><a class="btn gold" href="https://cranbrookbucks.goigniter.com/events/45360-kimberley-pipe-band-100th-anniversary-tattoo" target="_blank" rel="noopener">Get tickets</a></div>
+
+<dialog id="bandDlg" aria-labelledby="bandName">
+  <div class="dlg">
+    <img class="bandimg" id="bandImg" alt="" hidden>
+    <p class="est" id="bandEst" style="font:800 14px/1 var(--display);letter-spacing:.22em;text-transform:uppercase;color:var(--brass)"></p>
+    <h3 id="bandName"></h3>
+    <p class="where" id="bandWhere"></p>
+    <p class="bio" id="bandBio"></p>
+    <div class="dlg-bar">
+      <div><button class="btn ghost small" type="button" id="prevBand">← Previous</button><button class="btn ghost small" type="button" id="nextBand">Next →</button></div>
+      <button class="btn small" type="button" id="closeBand">Close</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  var BANDS=[
+    {id:'kimberley',host:1,name:'Kimberley Pipe Band',where:'Kimberley, B.C.',est:'Est. 1927',tags:['bc'],bio:'Brothers Angus and Hamish Scott founded the Kimberley Pipe Band in 1927, with Angus as its first Pipe Major. The band made its public debut leading the Kimberley Day Parade on July 1, 1927. Since then it has carried Kimberley’s Scottish musical tradition through generations of parades, ceremonies and celebrations. In 2027 it hosts fellow musicians and guests for 100 years of piping, drumming, friendship and community service.'},
+    {id:'bcr',name:'British Columbia Regiment Band',where:'Vancouver, B.C.',est:'Lineage 1883',kind:'Brass and reed band',tags:['bc','svc'],bio:'Based at Vancouver’s historic Beatty Street Drill Hall, the British Columbia Regiment Band is the brass-and-reed band of The British Columbia Regiment (Duke of Connaught’s Own). Its lineage reaches back to the regiment’s first authorized band in 1883. Volunteer musicians provide ceremonial and concert music for military occasions, commemorations, parades and public events across Greater Vancouver.'},
+    {id:'kootenay',name:'Kootenay Kiltie Pipe Band',where:'Nelson, B.C.',est:'Est. 1919',tags:['bc'],bio:'Founded in Nelson in 1919, the Kootenay Kiltie Pipe Band is the oldest pipe band in the British Columbia Interior. It began under Pipe Major William McLeary, and David Hogg has been Pipe Major since 1989. The Kilties wear the Modern (red) MacPherson tartan and serve Nelson, the West Kootenay and the wider Interior. They have shared a 100-year association with the Kimberley Pipe Band and wish it every success.'},
+    {id:'kelowna',name:'Kelowna Pipe Band Society',where:'Kelowna, B.C.',est:'Est. 1923',tags:['bc'],bio:'Founded in 1923, the Kelowna Pipe Band Society is one of British Columbia’s oldest pipe bands. It began as a community band, was later associated with the Royal Canadian Legion, and became an independent society in the early 2000s. Today it plays across the Okanagan and beyond, promoting Scottish music, remembrance and fellowship.'},
+    {id:'trail',name:'Trail Pipe Band',where:'Trail, B.C.',est:'Early 1920s',tags:['bc'],bio:'The Trail Pipe Band has been part of West Kootenay cultural life since the early 1920s, once under the name Trail Caledonia Society Pipe Band. It plays concerts, parades and community events across the Kootenays and the Pacific Northwest. It also teaches piping and drumming to students of all ages.'},
+    {id:'angus',name:'Angus Scott Pipe Band',where:'Spokane, Wash.',est:'Est. 1955',tags:['us'],bio:'The Angus Scott Pipe Band formed in the Spokane area in 1955 and is among the Pacific Northwest’s longest-serving pipe bands. It is named for Angus Scott, founding Pipe Major of the Kimberley Pipe Band, whose encouragement helped inspire its creation. Wearing Scott tartan, it plays across eastern Washington and northern Idaho and keeps a special connection with Kimberley.'},
+    {id:'shuswap',name:'Shuswap Pipes ’n Drums',where:'Shuswap, B.C.',est:'Est. 1968',tags:['bc'],bio:'Shuswap Pipes ’n Drums is a community band devoted to traditional Scottish piping and drumming. Formed in 1968, it plays at parades, competitions, commemorations and celebrations. Its members come from Lake Country, Vernon, Enderby, Salmon Arm, Chase, Sicamous and Revelstoke.'},
+    {id:'kamloops',name:'Kamloops Pipe Band Society',where:'Kamloops, B.C.',est:'Society 1978',tags:['bc'],bio:'Kamloops has had pipers since the 1920s. The Kamloops Legion Pipe Band laid a lasting foundation in 1962, and the present society formed in 1978. It has performed and competed across North America and in Scotland, and it stays committed to community service, musical development and Scottish tradition.'},
+    {id:'kalamalka',name:'Kalamalka Highlanders Pipe Band',where:'Vernon, B.C.',est:'Est. 1984',tags:['bc'],bio:'Pipe Major Reg Scott founded the Kalamalka Highlanders in Vernon in 1984. The charitable organization promotes Scottish and Celtic culture through piping, drumming and community participation. Its members are familiar performers at parades, festivals and celebrations in Vernon and nearby communities.'},
+    {id:'cochrane',name:'Cochrane Pipe Band',where:'Cochrane, Alta.',est:'Est. 1999',tags:['ab'],bio:'Cochrane Pipe Band formed in 1999 as a recreational, non-competition pipe and drum band. Players of all skill levels join from Kananaskis, Cochrane, Calgary and surrounding communities. The band plays parades, memorials and special occasions through the year to promote traditional highland music.'},
+    {id:'augusta',name:'Augusta Pipes & Drums',where:'Augusta, Ga.',est:'Est. 2024',tags:['us'],bio:'Augusta Pipes & Drums began humbly in 2024. In a short time it has revived bagpiping and Scottish heritage in the Augusta, Georgia area.'},
+    {id:'lethbridge',name:'Lethbridge Police Service Pipe Band',where:'Lethbridge, Alta.',est:'Est. 2025',kind:'Police pipe band',tags:['ab','svc'],bio:'The Lethbridge Police Service Pipe Band formed in January 2025 by uniting the Lethbridge Legion Pipe Band and the Bridge City Highlanders Pipe Band. It comprises retired Lethbridge Police Service and civilian volunteers. It serves as a ceremonial unit and community ambassador at police ceremonies, Remembrance observances, parades and public events across southern Alberta.'},
+    {id:'boundary',name:'Boundary Pipe Band Society',where:'Boundary region, B.C.',est:'Est. 2026',tags:['bc'],bio:'The Boundary Pipe Band Society was incorporated as a British Columbia non-profit on January 30, 2026. This new community band serves the Boundary region and is building a family-friendly program for pipers and drummers of all ages, with a focus on teaching and mentoring young musicians. It is led by Society President Jack Grant, Pipe Major Jon Wilson, Pipe Sergeant Nicki-Jo Wolfram and Lead Drummer Kelli-Jo Atwood. It performs at special events across the Boundary’s communities.'},
+    {id:'surrey',name:'Surrey Police Service Pipes and Drums',where:'Surrey, B.C.',est:'New band',kind:'Police pipe band',tags:['bc','svc'],bio:'The Surrey Police Service Pipes and Drums is a new band representing Surrey’s municipal police service. It draws on the long tradition of pipes and drums in policing and plays official ceremonies, commemorations, memorials and community events in Surrey and beyond.'},
+    {id:'cowichan',name:'Cowichan Pipes & Drums',where:'Duncan, B.C.',est:'Vancouver Island',tags:['bc'],bio:'Based in Duncan, Cowichan Pipes & Drums is an independent community band serving the Cowichan Valley and Vancouver Island. It plays traditional and contemporary pipe-band music at parades, ceremonies, festivals and celebrations. Its supporting society helps with training, uniforms, equipment and travel.'},
+    {id:'pg',name:'Prince George Pipes & Drums',where:'Prince George, B.C.',est:'Northern B.C.',tags:['bc'],bio:'Prince George Pipes & Drums is a community band representing Prince George and north-central British Columbia. Its pipers and drummers play parades, commemorations, festivals and civic celebrations. The band helps preserve Scottish musical tradition in northern B.C. and welcomes chances to play with bands from across the region.'}
+  ];
+
+  var current=-1,list=BANDS;
+  var $=function(i){return document.getElementById(i)};
+  var grid=$('roster'),dlg=$('bandDlg');
+  function show(d){try{d.showModal()}catch(e){d.setAttribute('open','')}}
+  function hide(d){try{d.close()}catch(e){d.removeAttribute('open')}}
+  list.forEach(function(b,i){
+    var li=document.createElement('li');li.className='tile'+(b.host?' host':'');
+    var bt=document.createElement('button');bt.type='button';
+    bt.setAttribute('aria-label','Read about '+b.name);
+    bt.innerHTML='<span class="est">'+(b.host?'Host band · ':'')+b.est+'</span><h3></h3><span class="where"></span>'+(b.kind?'<span class="where" style="color:var(--brass)">'+b.kind+'</span>':'')+'<span class="more">Read story</span>';
+    bt.querySelector('h3').textContent=b.name;
+    bt.querySelector('.where').textContent=b.where;
+    bt.onclick=function(){open(i)};
+    li.appendChild(bt);grid.appendChild(li);
+  });
+  function fill(i){
+    current=(i+list.length)%list.length;var b=list[current];
+    $('bandEst').textContent=(b.host?'Host band · ':'')+b.est+(b.kind?' · '+b.kind:'');
+    $('bandName').textContent=b.name;$('bandWhere').textContent=b.where;$('bandBio').textContent=b.bio;
+    var im=$('bandImg');
+    if(b.img){im.src=b.img;im.alt=b.name;im.hidden=false}else{im.removeAttribute('src');im.hidden=true}
+  }
+  function open(i){fill(i);show(dlg);dlg.scrollTop=0}
+  $('prevBand').onclick=function(){fill(current-1);dlg.scrollTop=0};
+  $('nextBand').onclick=function(){fill(current+1);dlg.scrollTop=0};
+  $('closeBand').onclick=function(){hide(dlg)};
+  dlg.addEventListener('click',function(e){if(e.target===dlg)hide(dlg)});
+  try{if('scrollRestoration' in history)history.scrollRestoration='manual';if(!location.hash)window.scrollTo(0,0)}catch(e){}
+})();
+</script>
+</body>
+</html>
