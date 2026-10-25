@@ -508,3 +508,16 @@ footer b{font:800 15px/1 var(--display);letter-spacing:.2em;text-transform:upper
 .band-names li:first-child{color:#ffd9dc;border-color:rgba(239,85,96,.55);background:linear-gradient(135deg,#5a0f18,#2a0d18 70%)}
 .band-go{padding:24px 44px}
 @media(max-width:560px){.band-names{display:none}.band-go{width:100%}}
+
+/* bands teaser banner */
+.bands-banner{position:relative;isolation:isolate;overflow:hidden;padding-block:clamp(70px,11vw,150px)}
+.bb-photo{position:absolute;inset:0;z-index:-2;background-color:#0a0d16;background-size:cover;background-position:50% 62%}
+.bands-banner::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(8,11,18,.94) 0%,rgba(8,11,18,.78) 45%,rgba(8,11,18,.35) 100%)}
+.bb-in{display:grid;gap:clamp(22px,3vw,34px);justify-items:start}
+.bb-in h2{margin:0}
+.bb-btn{display:inline-flex;align-items:center;gap:18px;text-decoration:none;font:900 clamp(20px,2.4vw,28px)/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:linear-gradient(180deg,#f3d889,#d4b26e 60%,#c39a4a);padding:12px 12px 12px clamp(26px,3vw,40px);border-radius:999px;box-shadow:0 12px 34px rgba(212,178,110,.35),inset 0 1px 0 rgba(255,255,255,.55);transition:transform .2s,box-shadow .2s}
+.bb-btn i{display:grid;place-items:center;width:clamp(46px,5vw,58px);height:clamp(46px,5vw,58px);border-radius:50%;background:var(--ink);color:var(--brass);font-style:normal;font-size:clamp(24px,2.6vw,30px);transition:transform .2s}
+.bb-btn:hover{transform:translateY(-3px);box-shadow:0 18px 44px rgba(212,178,110,.5),inset 0 1px 0 rgba(255,255,255,.55)}
+.bb-btn:hover i{transform:translateX(5px)}
+.bb-btn:focus-visible{outline:3px solid var(--ivory);outline-offset:4px}
+@media(max-width:560px){.bands-banner::before{background:linear-gradient(180deg,rgba(8,11,18,.62),rgba(8,11,18,.9))}.bb-btn{width:100%;justify-content:space-between;font-size:18px;letter-spacing:.1em;padding-left:24px}}
