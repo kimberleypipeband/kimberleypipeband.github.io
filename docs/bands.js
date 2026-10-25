@@ -32,13 +32,11 @@ var HOST={
 var BANDS=[
   {id:'bcr',name:'British Columbia Regiment Band',where:'Vancouver, B.C.',est:'Lineage 1883',yr:'1883',kind:'Brass and reed band',
    bio:'Based at Vancouver’s historic Beatty Street Drill Hall, this is the brass-and-reed band of The British Columbia Regiment (Duke of Connaught’s Own). Its musical lineage dates to the regiment’s first authorized band in 1883, and it was revived as a volunteer band in 1987. Today its musicians provide ceremonial and concert music for military occasions, commemorations, parades and public events throughout Greater Vancouver.',
-   note:'The only band at this Tattoo without bagpipes: brass, woodwinds and percussion.',
-   links:[['bcrband.com','https://www.bcrband.com']]},
+   note:'The only band at this Tattoo without bagpipes: brass, woodwinds and percussion.'},
 
   {id:'kootenay',name:'Kootenay Kiltie Pipe Band',where:'Nelson, B.C.',est:'Est. 1919',yr:'1919',
    bio:'Founded in Nelson in 1919, the Kootenay Kiltie Pipe Band is the oldest pipe band in the British Columbia Interior. From its beginnings under Pipe Major William McLeary, it has provided music for generations of parades, ceremonies and celebrations. Wearing MacPherson tartan, the Kilties serve Nelson, the West Kootenay and the wider Interior, and have shared a 100-year association with the Kimberley Pipe Band.',
-   note:'Nelson’s Highland Games, first held in 1932, ran as an annual event for 50 years.',
-   links:[['Nelson Museum: the Kiltie Band at 100','https://nelsonmuseum.ca/exhibitions/kiltie-band-100-year-anniversary/']]},
+   note:'Nelson’s Highland Games, first held in 1932, ran as an annual event for 50 years.'},
 
   {id:'trail',name:'Trail Pipe Band',where:'Trail, B.C.',est:'Early 1920s',yr:'1920s',
    bio:'The Trail Pipe Band has been part of the cultural life of the West Kootenay since the early 1920s. Once known as the Trail Caledonia Society Pipe Band, it performs at concerts, parades and community events throughout the Kootenays and Pacific Northwest. It also teaches piping and drumming to students of all ages, helping ensure the tradition continues.'},
@@ -47,8 +45,8 @@ var BANDS=[
    bio:'Founded in 1923, the Kelowna Pipe Band Society is one of British Columbia’s oldest pipe bands. Originally a community ensemble and later associated with the Royal Canadian Legion, it became an independent society in the early 2000s. Today it performs throughout the Okanagan and beyond, promoting Scottish music, remembrance and fellowship.',
    note:'For its 100th birthday in 2023, ten bands marched together down Bernard Avenue, including Kimberley and Kootenay Kiltie.'},
 
-  {id:'pg',name:'Prince George Pipes & Drums',where:'Prince George, B.C.',est:'Est. 1950s',yr:'1950s',
-   bio:'A community band dating to the 1950s, representing Prince George and north-central British Columbia. Its pipers and drummers bring the stirring sound of Highland music to parades, commemorations, festivals and civic celebrations, helping preserve Scottish musical traditions in the north while welcoming chances to perform with bands from across the region.'},
+  {id:'pg',name:'Prince George Pipes & Drums',where:'Prince George, B.C.',est:'Est. 1950',yr:'1950',
+   bio:'A community band founded in 1950, representing Prince George and north-central British Columbia. Its pipers and drummers bring the stirring sound of Highland music to parades, commemorations, festivals and civic celebrations, helping preserve Scottish musical traditions in the north while welcoming chances to perform with bands from across the region.'},
 
   {id:'angus',name:'Angus Scott Pipe Band',where:'Spokane, Wash.',est:'Est. 1955',yr:'1955',
    bio:'Formed in the Spokane area in 1955, the Angus Scott Pipe Band is among the Pacific Northwest’s longest-serving pipe bands. It is named for Angus Scott, founding Pipe Major of the Kimberley Pipe Band, whose encouragement helped inspire its creation. Wearing Scott tartan, it performs throughout eastern Washington and northern Idaho and keeps a special connection with Kimberley.',
@@ -75,8 +73,7 @@ var BANDS=[
 
   {id:'lethbridge',name:'Lethbridge Police Service Pipe Band',where:'Lethbridge, Alta.',est:'Formed 2025',yr:'2025',kind:'Police pipe band',
    bio:'Formed in January 2025, the Lethbridge Police Service Pipe Band united the Lethbridge Legion Pipe Band and the Bridge City Highlanders Pipes and Drums. Made up of police personnel and civilian volunteers, it serves as both a ceremonial unit and a community ambassador at police ceremonies, Remembrance observances, parades and public events across southern Alberta.',
-   note:'The Legion band it grew from dates to 1952, when it began as the Army, Navy, Airforce Pipe Band.',
-   links:[['Lethbridge Police pipe band page','https://www.lethbridgepolice.ca/lpspipeband']]},
+   note:'The Legion band it grew from dates to 1952, when it began as the Army, Navy, Airforce Pipe Band.'},
 
   {id:'boundary',name:'Boundary Pipe Band Society',where:'Boundary region, B.C.',est:'Est. 2026',yr:'2026',
    bio:'Incorporated as a British Columbia non-profit on January 30, 2026, the Boundary Pipe Band Society serves the communities of the Boundary region. It is building a family-friendly program for pipers and drummers of all ages, with a focus on teaching and mentoring young musicians, and performs at parades, Remembrance observances and festivals.'},
