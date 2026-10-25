@@ -70,9 +70,8 @@ p{margin:0 0 1em}
 .bg-contact{background-image:url(../images/backgrounds/contact.jpg)}
 .bg-schedule-header{background-image:url(../images/backgrounds/schedule-header.jpg)}
 .bg-schedule-section{background-image:url(../images/backgrounds/schedule-section.jpg)}
-/* About Us header: the band today. Gallery header: the original band, 1927. */
-.bg-about-header{background-image:url(../images/gallery/band-today.jpg);background-position:center 40%}
-.bg-gallery-header{background-image:url(../images/gallery/original-band-1927.jpg);background-position:center 30%}
+.bg-about-header{background-image:url(../images/backgrounds/about-header.jpg)}
+.bg-gallery-header{background-image:url(../images/backgrounds/gallery-header.jpg)}
 
 /* Band tartan (Cameron of Erracht colours), drawn in CSS, no photo needed.
    Used behind "Parade season is here" and "The Band Through the Years". */
