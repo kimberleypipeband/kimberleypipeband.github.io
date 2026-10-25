@@ -500,6 +500,15 @@ footer b{font:800 15px/1 var(--display);letter-spacing:.2em;text-transform:upper
 .sp-grid .logo:first-child img{width:min(520px,100%);max-height:none}
 .sp-grid .logo:first-child p{font-size:16px}
 .sp-grid .logo:first-child span{font-size:20px}
+.sp-band{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(10px,1.6vw,16px);margin-top:clamp(14px,2.4vw,28px)}
+.sp-band .logo{background:var(--ivory);padding:18px 14px 16px;display:grid;gap:9px;justify-items:center;align-content:start;text-align:center;color:var(--ink)}
+.sp-band .logo p{margin:0;font:800 12px/1.2 var(--display);letter-spacing:.2em;text-transform:uppercase;color:#6b1219}
+.sp-band .logo img{width:auto;height:96px;max-width:100%;object-fit:contain}
+.sp-band .logo img.round{border-radius:50%}
+.sp-band .logo span{font:600 17px/1.15 var(--body);color:var(--ink)}
+.sp-band .logo small{font:italic 400 15px/1.2 var(--body);color:#4a4a4a}
+@media(max-width:900px){.sp-band{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:620px){.sp-band{grid-template-columns:repeat(2,minmax(0,1fr))}.sp-band .logo img{height:84px}}
 .sp-grid .logo .pair{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:18px 28px;width:100%}
 .sp-grid .logo .pair img{width:auto;height:84px;max-width:46%;object-fit:contain}
 @media(max-width:620px){.sp-grid .logo .pair img{height:auto;max-height:84px;max-width:44%}}
