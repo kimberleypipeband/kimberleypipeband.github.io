@@ -159,7 +159,7 @@
         </div>
       </div>
     </div>
-    <div class="vol">
+    <div class="vol" id="volunteer">
       <div class="vol-head">
         <h3>Become a volunteer</h3>
         <p class="copy">We need people to help make the night happen. Find a role and sign up.</p>
@@ -279,6 +279,11 @@
   document.querySelectorAll('.vg').forEach(function(b){b.onclick=function(){openVol(b.getAttribute('data-g'))}});
   $('closeVol').onclick=function(){hide(vd)};
   [sd,vd].forEach(function(d){d.addEventListener('click',function(e){if(e.target===d)hide(d)})});
+
+  /* Shareable link: www.kimberleypipeband.ca/#volunteer opens the volunteer roles popup */
+  function openVolFromHash(){if(location.hash==='#volunteer'&&!vd.open)openVol()}
+  openVolFromHash();
+  window.addEventListener('hashchange',openVolFromHash);
 
   /* Countdown: counts calendar days in Kimberley's time zone (Mountain, America/Edmonton) and refreshes itself */
   function kimberleyToday(){
