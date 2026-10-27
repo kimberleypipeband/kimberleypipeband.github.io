@@ -222,10 +222,12 @@ a.ticket:hover{transform:translateY(-5px)}
 .tag{grid-row:1;grid-column:2;font:800 13px/1 var(--display);letter-spacing:.2em;text-transform:uppercase;padding:7px 10px;border:1px solid var(--line)}
 .tag.ok{color:#9fe0b4;border-color:rgba(159,224,180,.45)}
 .tag.soon{color:var(--brass);border-color:rgba(212,178,110,.5)}
+@media(max-width:560px){.status li{grid-template-columns:minmax(0,1fr);gap:8px}.status .tag{grid-row:2;grid-column:1;justify-self:start}.status span.d{grid-row:3}}
 @media(max-width:780px){.status{grid-template-columns:1fr}}
 
 .vol h3{font-size:clamp(34px,4.6vw,52px)}
 .roles h3{font-size:clamp(34px,5vw,48px);margin-bottom:6px}
+.roles h3:focus{outline:none}
 .roles .note{color:var(--mute);font-size:17px}
 .roles h4{font:800 15px/1 var(--display);letter-spacing:.24em;text-transform:uppercase;color:var(--brass);margin:30px 0 4px;padding-bottom:10px;border-bottom:1px solid var(--line)}
 .roles ul{list-style:none;margin:0;padding:0}
@@ -491,11 +493,12 @@ footer b{font:800 15px/1 var(--display);letter-spacing:.2em;text-transform:upper
 #tickets .ticket .age{font-size:14px}
 #tickets .ticket .price{font-size:clamp(38px,4.6vw,50px)}
 #tickets .ticket .sections{font-size:14px;margin-top:6px;padding-top:6px}
-.signup-box{margin-top:26px;padding:20px;border:1px solid var(--brass);background:rgba(212,178,110,.08);display:grid;gap:14px;justify-items:start}
+.signup-box{margin-top:18px;padding:16px 20px;border:1px solid var(--brass);background:rgba(212,178,110,.08);display:grid;gap:14px;justify-items:start}
 .signup-box .vol-big{font-size:20px;padding:20px 28px;letter-spacing:.1em;white-space:normal;text-align:center}
 .signup-note{margin:0;font-size:18px;line-height:1.5}
 .signup-note b{color:var(--brass);font-weight:700}
 @media(max-width:600px){.signup-box .vol-big{width:100%}}
+.roles .dlg-bar{gap:12px;flex-wrap:nowrap}.roles .dlg-bar .vol-btn{flex:1;text-align:center;white-space:normal;line-height:1.15}
 .sp-grid .logo:first-child{grid-column:1/-1;padding:clamp(30px,5vw,60px)}
 .sp-grid .logo:first-child img{width:min(520px,100%);max-height:none}
 .sp-grid .logo:first-child p{font-size:16px}
