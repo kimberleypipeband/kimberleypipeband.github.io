@@ -538,4 +538,8 @@ footer b{font:800 15px/1 var(--display);letter-spacing:.2em;text-transform:upper
 .bb-btn:hover{transform:translateY(-3px);box-shadow:0 18px 44px rgba(212,178,110,.5),inset 0 1px 0 rgba(255,255,255,.55)}
 .bb-btn:hover i{transform:translateX(5px)}
 .bb-btn:focus-visible{outline:3px solid var(--ivory);outline-offset:4px}
+.stay-banner .in{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;justify-items:start}
+.stay-banner .eyebrow{margin-bottom:0}
+.stay-banner h2{font-size:clamp(30px,8.4vw,66px);line-height:.95}
+.stay-banner .copy{font-size:clamp(19px,2.2vw,22px);line-height:1.55;margin:0}
 @media(max-width:560px){.bands-banner::before{background:linear-gradient(180deg,rgba(8,11,18,.62),rgba(8,11,18,.9))}.bb-btn{width:100%;justify-content:space-between;font-size:18px;letter-spacing:.1em;padding-left:24px}}
