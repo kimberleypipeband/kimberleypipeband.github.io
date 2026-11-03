@@ -145,8 +145,4 @@ var VIDEOS = [
     note: "Pipe Major Jock MacDonald", poster: "amazing-grace-finale-2017.jpg", youtube: "3BUDWkYh4mI" },
   { title: "90th Anniversary Parade", year: "2017",
     note: "Down the main street of Kimberley", poster: "tattoo-parade-2017.jpg", youtube: "H-nvjUBpj7I" },
-  { title: "Ceilidh with the Johnny McCuaig Band", year: "2017",
-    note: "It's a Long Way to the Top", poster: "ceilidh-johnny-mccuaig-2017.jpg", youtube: "" },
-  { title: "Hornpipe", year: "2017",
-    note: "", poster: "hornpipe-2017.jpg", youtube: "" },
 ];
