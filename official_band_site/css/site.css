@@ -131,7 +131,8 @@ p{margin:0 0 1em;max-width:66ch}
 
 /* ---------- 100th banner ---------- */
 .centenary{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(20px,4vw,48px);align-items:center}
-.centenary img{width:clamp(120px,16vw,190px);border-radius:6px}
+.centenary .gold-frame{width:clamp(130px,17vw,200px);padding:5px;border-radius:18px;background:linear-gradient(135deg,#f3d889,#b88a2c 45%,#f1d283 70%,#9c7020);box-shadow:0 0 0 1px rgba(0,0,0,.6),0 14px 40px rgba(0,0,0,.45),0 0 40px rgba(212,178,110,.18)}
+.centenary .gold-frame img{display:block;width:100%;height:auto;border-radius:13px;border:2px solid #0a0a0a}
 .centenary .date{font:800 clamp(2.4rem,5vw,4rem)/.9 var(--display);color:var(--gold);text-align:right}
 .centenary .date small{display:block;font:600 1rem/1.4 var(--body);color:#dfe8e2;margin-top:8px}
 @media (max-width:760px){.centenary{grid-template-columns:1fr}.centenary .date{text-align:left}}
