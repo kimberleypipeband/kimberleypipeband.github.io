@@ -141,10 +141,10 @@ var TRACKS = [
    Until then the poster picture shows with "Video coming soon".
    ----------------------------------------------------------------- */
 var VIDEOS = [
-  { title: "Amazing Grace, 90th Anniversary Tattoo finale", year: "2017",
-    note: "Pipe Major Jock MacDonald", poster: "amazing-grace-finale-2017.jpg", youtube: "" },
+  { title: "Kimberley Pipe Band 90th Tattoo mass band finale", year: "2017",
+    note: "Pipe Major Jock MacDonald", poster: "amazing-grace-finale-2017.jpg", youtube: "3BUDWkYh4mI" },
   { title: "90th Anniversary Parade", year: "2017",
-    note: "Down the main street of Kimberley", poster: "tattoo-parade-2017.jpg", youtube: "" },
+    note: "Down the main street of Kimberley", poster: "tattoo-parade-2017.jpg", youtube: "H-nvjUBpj7I" },
   { title: "Ceilidh with the Johnny McCuaig Band", year: "2017",
     note: "It's a Long Way to the Top", poster: "ceilidh-johnny-mccuaig-2017.jpg", youtube: "" },
   { title: "Hornpipe", year: "2017",
