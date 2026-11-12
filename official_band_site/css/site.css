@@ -373,3 +373,7 @@ textarea{min-height:120px;resize:vertical}
   .menu-btn{padding:10px 13px}
 }
 .menu-btn{white-space:nowrap}.site-head .brand{min-width:0}
+
+.social .fb-card{display:block}
+.social .fb-card img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px}
+.social .btn{color:var(--white)}
