@@ -17,10 +17,15 @@
       btn.setAttribute("aria-expanded", open ? "true" : "false");
       btn.textContent = open ? "Close" : "Menu";
     });
+    function shut() { nav.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); btn.textContent = "Menu"; }
+    document.addEventListener("click", function (e) { if (!nav.contains(e.target) && e.target !== btn) shut(); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") shut(); });
   }
 
   /* Links to the Tattoo site and band email come from site-data.js */
   if (typeof TATTOO_URL !== "undefined") $$("[data-tattoo]").forEach(function (a) { a.href = TATTOO_URL; });
+  if (typeof FACEBOOK_URL !== "undefined") $$("[data-facebook]").forEach(function (a) { a.href = FACEBOOK_URL; });
+  if (typeof INSTAGRAM_URL !== "undefined") $$("[data-instagram]").forEach(function (a) { a.href = INSTAGRAM_URL; });
   if (typeof BAND_EMAIL !== "undefined") $$("[data-email]").forEach(function (a) {
     var subj = a.getAttribute("data-email");
     a.href = "mailto:" + BAND_EMAIL + (subj ? "?subject=" + encodeURIComponent(subj) : "");
@@ -45,7 +50,8 @@
         var days = Math.round((s - today) / 864e5);
         var tag = days <= 0 ? "On now" : days === 1 ? "Tomorrow" : days < 60 ? "In " + days + " days" : "Save the date";
         return '<li' + (e.big ? ' class="big"' : '') + '><div class="when"><b>' + day + '</b><span>' + MONTHS[s.getMonth()] + " " + s.getFullYear() + '</span></div>' +
-          '<div><h3>' + esc(e.name) + '</h3><p>' + esc(e.place) + (e.note ? " — " + esc(e.note) : "") + '</p></div>' +
+          '<div><h3>' + esc(e.name) + '</h3><p>' + esc(e.place) + (e.note ? " — " + esc(e.note) : "") + '</p>' +
+          (e.link ? '<p class="ev-link"><a class="btn btn-red" href="' + esc(e.link) + '" target="_blank" rel="noopener">' + esc(e.linkText || "More info") + '</a></p>' : '') + '</div>' +
           '<span class="tag">' + tag + '</span></li>';
       }).join("");
     }

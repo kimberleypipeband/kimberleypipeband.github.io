@@ -16,19 +16,25 @@ var TATTOO_URL = "https://www.kimberleypipeband.ca/";
 /* Band email address (used for bookings and the join button). */
 var BAND_EMAIL = "info@kimberleypipeband.ca";
 
+/* Facebook and Instagram pages (footer links and the Home page feeds). */
+var FACEBOOK_URL = "https://www.facebook.com/The-Kimberley-Pipe-Band-122960331054714/";
+var INSTAGRAM_URL = "https://www.instagram.com/kimberleypipeband/";
+
 
 /* -----------------------------------------------------------------
    UPCOMING EVENTS  (shown on the Home page under "Where we're playing")
    date:  year-month-day, e.g. "2027-06-05"
    Past events disappear from the list by themselves.
    Set big: true to make one event stand out.
+   link + linkText: adds a button under the event (e.g. a ticket page).
    ----------------------------------------------------------------- */
 var EVENTS = [
-  { date: "2027-07-23", end: "2027-07-24",
-    name: "100th Anniversary Tattoo",
-    place: "Kimberley, B.C.",
-    note: "Two days celebrating 100 years of the band.",
-    big: true },
+  { date: "2027-01-30",
+    name: "Robbie Burns Fundraising Dinner, Dance & Silent Auction",
+    place: "Royal Alexandra Hall, Cranbrook",
+    note: "Cocktails 6:00 p.m., dinner 6:30 p.m. Tickets $90. Dinner catered by The Heid Out, optional Scotch tasting. Dress: uniform, Celtic or evening attire, with a prize for best Highland dressed.",
+    link: "https://www.zeffy.com/en-CA/ticketing/robbie-burns-fundraising-dinner-dance-and-silent-auction-copy",
+    linkText: "Buy tickets on Zeffy" },
 ];
 
 /* Parades and events the band plays most years. Shown under the list
@@ -40,7 +46,6 @@ var REGULARS = [
   { name: "Spirit of the Rockies Parade, Cranbrook", when: "June" },
   { name: "Julyfest Parade, Kimberley", when: "July" },
   { name: "Remembrance Day", when: "November" },
-  { name: "Robbie Burns Night", when: "January" },
 ];
 
 

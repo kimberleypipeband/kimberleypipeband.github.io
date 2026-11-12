@@ -21,18 +21,19 @@
 <header class="site-head">
   <div class="wrap bar">
     <a class="brand" href="index.html">
-      <img src="img/brand/kpb-crest.png" alt="" width="46" height="46">
+      <span class="logo-frame"><img src="img/brand/new-logo.jpg" alt="" width="52" height="54"></span>
       <span>Kimberley Pipe Band<small>Kimberley, B.C. Since 1927.</small></span>
     </a>
+    <a class="btn btn-red bar-book" href="book.html#book">Book the band</a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav id="nav" class="nav" aria-label="Main">
       <ul>
         <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="story.html">Our story</a></li>
+        <li><a href="band.html">Meet the band</a></li>
         <li><a href="book.html">Book &amp; join</a></li>
         <li><a href="listen.html">Listen &amp; watch</a></li>
         <li><a data-tattoo href="https://www.kimberleypipeband.ca/">100th Tattoo</a></li>
-        <li><a class="btn btn-red" href="book.html#book">Book the band</a></li>
+        <li class="nav-book"><a class="btn btn-red" href="book.html#book">Book the band</a></li>
       </ul>
     </nav>
   </div>
@@ -64,7 +65,7 @@
     <div>
       <h3 style="margin-top:.4em">Most years you&rsquo;ll also find us at</h3>
       <ul class="regulars" id="regulars"></ul>
-      <p style="margin-top:22px">Dates firm up in the spring. For the latest, follow the band on <a href="https://www.facebook.com/The-Kimberley-Pipe-Band-122960331054714/" target="_blank" rel="noopener">Facebook</a>.</p>
+      <p style="margin-top:22px">Dates firm up in the spring. For the latest, follow the band on <a data-facebook href="https://www.facebook.com/The-Kimberley-Pipe-Band-122960331054714/" target="_blank" rel="noopener">Facebook</a> or <a data-instagram href="https://www.instagram.com/kimberleypipeband/" target="_blank" rel="noopener">Instagram</a>.</p>
       <p>Want us at your parade or event? <a href="book.html#book">Send a booking request</a>.</p>
     </div>
   </div>
@@ -104,6 +105,30 @@
   </div>
 </section>
 
+<!-- ===== FACEBOOK + INSTAGRAM (feeds supplied by Meta) ===== -->
+<section class="section" id="follow">
+  <div class="wrap">
+    <h2>Follow the band</h2>
+    <p class="lede">Photos, Member Monday and where we&rsquo;re playing next, straight from our Facebook and Instagram pages.</p>
+    <div class="social">
+      <div>
+        <h3>Facebook</h3>
+        <iframe title="Kimberley Pipe Band on Facebook" loading="lazy" height="620" scrolling="no" allow="encrypted-media; picture-in-picture; web-share"
+          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FThe-Kimberley-Pipe-Band-122960331054714%2F&amp;tabs=timeline&amp;width=500&amp;height=620&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=false"></iframe>
+        <p style="margin:12px 0 0"><a data-facebook href="https://www.facebook.com/The-Kimberley-Pipe-Band-122960331054714/" target="_blank" rel="noopener">Open our Facebook page</a></p>
+      </div>
+      <div>
+        <h3>Instagram</h3>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/kimberleypipeband/" data-instgrm-version="14">
+          <a data-instagram href="https://www.instagram.com/kimberleypipeband/" target="_blank" rel="noopener">@kimberleypipeband on Instagram</a>
+        </blockquote>
+        <p style="margin:12px 0 0"><a data-instagram href="https://www.instagram.com/kimberleypipeband/" target="_blank" rel="noopener">Follow @kimberleypipeband</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+<script async src="https://www.instagram.com/embed.js"></script>
+
 <!-- ===== THEN AND NOW ===== -->
 <section class="section on-mist">
   <div class="wrap">
@@ -111,9 +136,9 @@
     <p class="lede">Nine Pipe Majors, a mine that came and went, and a band that never stopped marching.</p>
     <div class="then-now" style="margin-top:28px">
       <figure><img class="framed" src="img/history/1927-original-band.jpg" alt="The original Kimberley Pipe Band in 1927, seated with drums" loading="lazy"><figcaption>1927<small>The original band, Kimberley Day, July 1</small></figcaption></figure>
-      <figure><img class="framed" src="img/history/today-chairlift.jpg" alt="The Kimberley Pipe Band today under the ski hill chairlift" loading="lazy"><figcaption>Today<small>On the ski hill, the Rockies at our backs</small></figcaption></figure>
+      <figure><img class="framed" src="img/history/today-remembrance-2026.jpg" alt="The Kimberley Pipe Band today in kilts and poppies, lined up behind their drums on Remembrance Day" loading="lazy"><figcaption>Today<small>Remembrance Day, 2026</small></figcaption></figure>
     </div>
-    <div class="actions"><a class="btn btn-red" href="story.html">Read the band&rsquo;s story</a><a class="btn btn-line dark" href="story.html#band">Meet the band</a></div>
+    <div class="actions"><a class="btn btn-red" href="band.html">Meet the band</a></div>
   </div>
 </section>
 </main>
@@ -124,15 +149,14 @@
   <div class="wrap">
     <div class="cols">
       <div>
-        <div class="crest"><img src="img/brand/thistle.png" alt=""><h3>Kimberley Pipe Band</h3></div>
+        <div class="crest"><span class="logo-frame big"><img src="img/brand/new-logo.jpg" alt="Kimberley Pipe Band, 1927 to 2027" width="76" height="79"></span><h3>Kimberley Pipe Band</h3></div>
         <p>Mailing address:<br>120 Lindsay St.<br>Kimberley, B.C. V1A 1L4</p>
         <p><a data-email href="mailto:info@kimberleypipeband.ca">info@kimberleypipeband.ca</a></p>
       </div>
       <div>
         <h3>Around the site</h3>
         <ul>
-          <li><a href="story.html">Our story</a></li>
-          <li><a href="story.html#band">Meet the band</a></li>
+          <li><a href="band.html">Meet the band</a></li>
           <li><a href="book.html#book">Book the band or a piper</a></li>
           <li><a href="book.html#lessons">Lessons &amp; practices</a></li>
           <li><a href="listen.html">Listen &amp; watch</a></li>
@@ -141,7 +165,10 @@
       <div>
         <h3>Follow along</h3>
         <ul>
-          <li><a href="https://www.facebook.com/The-Kimberley-Pipe-Band-122960331054714/" target="_blank" rel="noopener">Kimberley Pipe Band on Facebook</a></li>
+          <li><ul class="follow">
+            <li><a data-facebook href="https://www.facebook.com/The-Kimberley-Pipe-Band-122960331054714/" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a data-instagram href="https://www.instagram.com/kimberleypipeband/" target="_blank" rel="noopener">Instagram @kimberleypipeband</a></li>
+          </ul></li>
           <li><a data-tattoo href="https://www.kimberleypipeband.ca/">100th Anniversary Tattoo, July 23&ndash;24, 2027</a></li>
         </ul>
         <p style="margin-top:14px">Practice: Mondays, 7 to 9 p.m.</p>
