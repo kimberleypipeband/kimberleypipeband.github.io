@@ -43,11 +43,20 @@
 <body>
 <div class="top-gap" aria-hidden="true"></div>
 <header class="top">
-  <div class="in hb">
-    <a class="hbtn hb-meet" href="index.html">← Main page</a>
-    <a class="hbtn hb-vol" href="https://volunteersignup.org/L8AP3" target="_blank" rel="noopener">Become a volunteer</a>
-    <a class="hbtn hb-tix" href="https://cranbrookbucks.goigniter.com/events/45360-kimberley-pipe-band-100th-anniversary-tattoo" target="_blank" rel="noopener">Get tickets</a>
+  <div class="in tb">
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menuPanel"><span class="bars" aria-hidden="true"></span><span id="menuLbl">Menu</span></button>
+    <span class="tb-brand">Kimberley Pipe Band · 100th Anniversary Tattoo</span>
+    <a class="tb-tix" href="https://cranbrookbucks.goigniter.com/events/45360-kimberley-pipe-band-100th-anniversary-tattoo" target="_blank" rel="noopener">Get tickets</a>
   </div>
+  <nav class="menu-panel" id="menuPanel" aria-label="Site menu" hidden>
+    <div class="in"><div class="menu-list">
+      <a class="mi mi-site" href="https://www.kimberleypipeband.ca/official_band_site/" target="_blank" rel="noopener"><span>Kimberley Pipe Band website<small>Pipes and drums in Kimberley, B.C. since 1927</small></span><i aria-hidden="true">↗</i></a>
+      <a class="mi" href="index.html">100th Anniversary Tattoo: home</a>
+      <a class="mi" href="bands.html">Meet the bands</a>
+      <a class="mi" aria-current="page" href="stay.html">Accommodation and lodging</a>
+      <a class="mi mi-vol" href="HREF"TGT>Become a volunteer</a>
+    </div></div>
+  </nav>
 </header>
 
 <main>
@@ -116,6 +125,16 @@
       if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){done(true)},fallback)}else fallback();
     });
   });
+})();
+</script>
+<script>
+(function(){
+  var b=document.getElementById('menuBtn'),p=document.getElementById('menuPanel'),l=document.getElementById('menuLbl');
+  function set(o){p.hidden=!o;b.setAttribute('aria-expanded',o?'true':'false');l.textContent=o?'Close':'Menu'}
+  b.addEventListener('click',function(e){e.stopPropagation();set(p.hidden)});
+  p.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});
+  document.addEventListener('click',function(e){if(!p.hidden&&!p.contains(e.target))set(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!p.hidden){set(false);b.focus()}});
 })();
 </script>
 </body>
