@@ -377,3 +377,14 @@ textarea{min-height:120px;resize:vertical}
 .social .fb-card{display:block}
 .social .fb-card img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px}
 .social .btn{color:var(--white)}
+
+/* ---------- Member Monday card in the pop-up ---------- */
+dialog.has-card{max-width:min(940px,96vw);background:#12393b}
+dialog .mm-card{display:block;width:100%;height:auto}
+.mm-text{display:none}
+@media (max-width:640px){
+  .mm-text{display:block;background:var(--white);padding:16px 18px 20px}
+  .mm-text b{display:block;font:800 1.4rem var(--display);color:var(--forest)}
+  .mm-text span{display:block;color:var(--red);font-weight:700;margin-bottom:12px}
+  .mm-text dl{margin:0}.mm-text dt{font-size:.88rem;color:var(--granite-2)}.mm-text dd{margin:0 0 8px;font-weight:700}
+}

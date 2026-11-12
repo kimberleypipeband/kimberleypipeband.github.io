@@ -82,10 +82,21 @@
           ["Away from the band", m.hobbies], ["Favourite tune or set", m.fav], ["Least favourite tune", m.least]]
           .filter(function (r) { return r[1]; })
           .map(function (r) { return "<dt>" + r[0] + "</dt><dd>" + esc(r[1]) + "</dd>"; }).join("");
+        var said = [m.name, m.role, m.since ? "member since " + m.since : ""].concat(
+          [["First event with the band", m.first], ["Started learning", m.age], ["First tune learned", m.tune],
+           ["Hobbies", m.hobbies], ["Favourite tune or set", m.fav], ["Least favourite tune", m.least]]
+            .filter(function (r) { return r[1]; }).map(function (r) { return r[0] + ": " + r[1]; })).filter(Boolean).join(". ");
+        dlg.classList.toggle("has-card", !!m.card);
+        if (m.card) {
+          $("#bio-body").innerHTML = '<h3 id="bio-title" class="visually-hidden">' + esc(m.name) + '</h3>' +
+            '<img class="mm-card" src="img/members/cards/' + esc(m.card) + '" alt="' + esc(said) + '" width="1175" height="985">' +
+            '<div class="mm-text" aria-hidden="true"><b>' + esc(m.name) + '</b><span>' + esc(m.role) + (m.since ? ", member since " + esc(m.since) : "") + '</span>' + (qa ? "<dl>" + qa + "</dl>" : "") + '</div>';
+        } else {
         $("#bio-body").innerHTML =
-          '<div class="bio">' + (m.photo ? '<img src="img/members/' + esc(m.photo) + '" alt="' + esc(m.name) + '">' : '<div></div>') +
-          '<div class="inner"><h3 id="bio-title">' + esc(m.name) + '</h3><p class="role">' + esc(m.role) + (m.since ? ", member since " + esc(m.since) : "") + "</p>" +
-          (qa ? "<dl>" + qa + "</dl>" : "<p>Profile coming soon.</p>") + "</div></div>";
+            '<div class="bio">' + (m.photo ? '<img src="img/members/' + esc(m.photo) + '" alt="' + esc(m.name) + '">' : '<div></div>') +
+            '<div class="inner"><h3 id="bio-title">' + esc(m.name) + '</h3><p class="role">' + esc(m.role) + (m.since ? ", member since " + esc(m.since) : "") + "</p>" +
+            (qa ? "<dl>" + qa + "</dl>" : "<p>Profile coming soon.</p>") + "</div></div>";
+        }
         dlg.showModal();
       });
     });
