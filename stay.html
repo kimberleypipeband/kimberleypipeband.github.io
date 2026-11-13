@@ -36,6 +36,13 @@
 .details .lk{display:grid;gap:4px}
 .more{margin-top:clamp(20px,3vw,30px);color:var(--mute);font-style:italic;font-size:19px}
 .back-row{margin-top:clamp(36px,6vw,60px)}
+.l-name{font:900 clamp(28px,3.1vw,36px)/.98 var(--display);letter-spacing:.04em;text-transform:uppercase;color:var(--ink)}
+.l-side.noimg{grid-template-columns:1fr!important;justify-items:center!important;text-align:center!important}
+.rate{margin:0;font:900 clamp(40px,5vw,52px)/1 var(--display);letter-spacing:.04em;color:var(--ivory)}
+.rate span{font-size:.5em;letter-spacing:.1em;color:var(--brass);margin-left:.3em}
+.rate-note{margin:8px 0 0;font-size:19px;line-height:1.4;color:var(--mute);font-style:italic}
+.book-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:4px}
+@media(max-width:560px){.book-row .btn{width:100%;text-align:center}}
 @media(max-width:860px){.lodge{grid-template-columns:1fr}.l-side{grid-template-columns:minmax(0,150px) minmax(0,1fr);justify-items:start;text-align:left;align-items:center}.details{grid-template-columns:1fr}.details>div{border-left:0;border-top:1px solid var(--line)}.details>div:first-child{border-top:0}}
 @media(max-width:560px){.l-side{grid-template-columns:1fr;justify-items:center;text-align:center}.l-side img{max-width:210px}.promo{display:grid}.code{justify-content:center}.copy-btn{width:100%}.how{font-size:18px}}
 </style>
@@ -101,6 +108,34 @@
         <div><b>Address</b><span>369 Spokane Street<br>Kimberley BC V1A 2E7</span></div>
         <div><b>Phone</b><a href="tel:+12504329381">250-432-9381</a></div>
         <div><b>Links</b><span class="lk"><a href="https://alpinelodging.ca/" target="_blank" rel="noopener">alpinelodging.ca</a><a href="https://linktr.ee/alpine.lodging" target="_blank" rel="noopener">linktr.ee/alpine.lodging</a></span></div>
+      </div>
+    </div>
+  </article>
+
+  <article class="lodge" aria-labelledby="prestige-h">
+    <div class="l-side noimg">
+      <div class="l-name">Prestige Cranbrook Hotel</div>
+      <img src="docs/images/bw-premier-collection.png" alt="BW Premier Collection by Best Western" width="512" height="184">
+      <h2 class="l-offer" id="prestige-h">Tattoo group rate</h2>
+    </div>
+    <div class="l-main">
+      <div>
+        <h3 class="l-h">Group rate</h3>
+        <p class="rate">$220.95<span>+ tax</span></p>
+        <p class="rate-note">2-queen rooms, based on double occupancy</p>
+      </div>
+      <div>
+        <h3 class="l-h">How to book</h3>
+        <ol class="how">
+          <li>Use the booking link below to reserve online at the group rate.</li>
+          <li>Or call the hotel at <a href="tel:+12504174002">250-417-4002</a> and ask for the <b>Kimberley Pipe Band Tattoo</b> group rate.</li>
+        </ol>
+        <div class="book-row" style="margin-top:16px"><a class="btn gold" href="https://www.bestwestern.com/en_US/book/hotel-rooms.62119.html?groupId=7B3VB3I6" target="_blank" rel="noopener">Book online ↗</a></div>
+      </div>
+      <div class="details">
+        <div><b>Rooms</b><span>2-queen rooms<br>Double occupancy</span></div>
+        <div><b>Phone</b><a href="tel:+12504174002">250-417-4002</a></div>
+        <div><b>Links</b><span class="lk"><a href="https://www.bestwestern.com/en_US/book/hotel-rooms.62119.html?groupId=7B3VB3I6" target="_blank" rel="noopener">Group booking link</a></span></div>
       </div>
     </div>
   </article>
