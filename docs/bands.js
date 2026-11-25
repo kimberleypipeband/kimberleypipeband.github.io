@@ -58,9 +58,6 @@ var BANDS=[
   {id:'kamloops',name:'Kamloops Pipe Band Society',where:'Kamloops, B.C.',est:'Society 1978',yr:'1978',
    bio:'The piping tradition in Kamloops reaches back to the 1920s, with a lasting foundation laid by the Kamloops Legion Pipe Band in 1962. The present society was formed in 1978 and has since performed and competed across North America and in Scotland. It remains committed to community service, musical development and the preservation of Scottish tradition.'},
 
-  {id:'cowichan',name:'Cowichan Pipes & Drums',where:'Duncan, B.C.',est:'Est. 1980',yr:'1980',
-   bio:'Founded in 1980 and based in Duncan, Cowichan Pipes & Drums is an independent community band serving the Cowichan Valley and Vancouver Island. It presents both traditional and contemporary pipe-band music at parades, ceremonies, festivals and community celebrations, and its supporting society assists with training, uniforms, equipment and travel.'},
-
   {id:'kalamalka',name:'Kalamalka Highlanders Pipe Band',where:'Vernon, B.C.',est:'Est. 1984',yr:'1984',
    bio:'Founded in Vernon in 1984 under Pipe Major Reg Scott, the Kalamalka Highlanders are an active performance band serving the North Okanagan. The charitable organization promotes Scottish and Celtic culture through piping, drumming and community participation, and wears the maroon and grey Portree tartan of the Isle of Skye.',
    note:'The only band in the B.C. Interior to run both a junior and an adult pipe band.'},
